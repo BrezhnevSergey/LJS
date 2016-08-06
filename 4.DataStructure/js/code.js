@@ -90,13 +90,13 @@ function genMinMax(min, max) {
 console.log(genMinMax(min, max));*/
 
 //task9 
-var min = askNum();
-var max = askNum();
+/*var min = askNum();
+var max = askNum();*/
 /*function genMinMax(min, max) {
 	return Math.round((min - 0.5) + Math.random() * (max - min + 1));
 }*/
 //or
-function genMinMax(min, max) {
+/*function genMinMax(min, max) {
 	return Math.floor(min + Math.random() * (max - min + 1));
 }
-console.log(genMinMax(min, max));
+console.log(genMinMax(min, max));*/
