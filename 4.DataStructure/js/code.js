@@ -1,14 +1,14 @@
 //---------------------digits----------------------------
 
 //task1
-function askNum() {
+/*function askNum() {
 	var num;
 	while (isNaN(num) || num == null)	{
 		num = +prompt("Enter a number:", "");
 	}
 	return num;
 }
-
+*/
 /*function sumTo(){
 	return askNum() + askNum();
 }
@@ -100,3 +100,48 @@ var max = askNum();*/
 	return Math.floor(min + Math.random() * (max - min + 1));
 }
 console.log(genMinMax(min, max));*/
+
+
+
+/////-------------------string
+
+//task1
+/*function ucFirst(str) {
+	var resultString;
+	if(str.length == 0 || str == 0) return "Empty string";
+	return resultString = str[0].toUpperCase() + str.slice(1);
+//or
+//	if(!str) return "Empty string";
+//	return resultString = str[0].toUpperCase() + str.slice(1);
+//
+}
+console.log(ucFirst("   "));*/
+
+
+//task2
+/*function checkSpam(str) {
+	var target1 = "viagra", target2 = "xxx";
+	if(~str.toLowerCase().indexOf(target1) || ~str.toLowerCase().indexOf(target2)) return true;
+	return false;
+}
+console.log(checkSpam("Vka la  xxX la"));*/
+
+//task3
+/*function truncate(str, maxlength) {
+	var resultString;
+	if(str.length > maxlength){
+		return resultString = str.slice(0, (maxlength - 3)) + "...";
+	}
+}
+
+var str = "sfdgfdsgf sdghfdfgh df hdfg hdf";
+console.log(truncate(str, 20));*/
+
+//task4
+/*function extractCurrencyValue(str) {
+	return  +str.slice(1);
+}
+console.log(extractCurrencyValue("$120"));*/
+
+
+////-----------------objects
