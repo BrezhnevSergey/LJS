@@ -396,11 +396,221 @@ console.log(getMaxSubSum([-1, 2, 3, -9])); // 5
 //console.log(getMaxSubSum([-1, -2, -3])); // 0*/
 
 ///////-----------method of array
-var user = {
-  name: "Петя",
-  age: 30
+//task1
+/*var obj = {
+  className: "open menu"
+};
+//function addClass(obj, cls){
+//	var arr = obj.className.split(" ");
+//	if(arr.indexOf(cls) == -1){
+//		arr.push(cls);
+//	}
+//	obj.className = arr.join(" ");
+//}
+//orr
+function addClass(obj, cls){
+	var arr = obj.className.split(" ");
+	for(var i = 0; i < arr.length; i++) {
+		if(arr[i] == cls) return;
+	}
+	arr.push(cls);
+	obj.className = arr.join(" ");
+}
+addClass(obj, "open");
+console.log(obj);
+addClass(obj, "menu");
+console.log(obj);
+addClass(obj, "mu");
+console.log(obj);*/
+
+//task2
+/*function camelize(str){
+	var arr = str.split("-");
+	for(var i = 1; i < arr.length; i++){
+		arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+	}
+	return arr.join("");
+}
+console.log(camelize("background-color")); //'backgroundColor';
+console.log(camelize("list-style-image")); // 'listStyleImage';
+console.log(camelize("-webkit-transition")); // 'WebkitTransition'*/
+
+//task3
+/*var obj = {
+  className: "open menu menu menu"
+};
+function removeClass(obj, cls) {
+	var arr = obj.className.split(" ");
+	for(var i = 0; i < arr.length; i++){
+		if(arr[i] == cls) {
+			arr.splice(i, 1);
+			i--	;
+		}
+	}
+	obj.className = arr.join(" ");
+}
+//removeClass(obj, 'open'); // obj.className='menu'
+removeClass(obj, 'menu')
+console.log(obj);
+removeClass(obj, 'blabla'); // без изменений (нет такого класса)
+console.log(obj);*/
+
+//task4
+/*var arr = [5, 3, 8, 1];
+function filterRangeInPlace(arr, a, b){
+	for(var i = 0; i < arr.length; i++){
+		if(a <= arr[i] && arr[i] <= b){
+			arr.splice(i, 1);
+			i--;
+		}
+	}
+}
+console.log(arr);
+filterRangeInPlace(arr, 1, 4);
+console.log(arr);*/
+
+//task5 
+/*var arr = [5, 2, 1, -10, 8];
+console.log(arr);
+arr.sort(function (a, b){
+	return b - a;
+})
+console.log(arr);*/
+
+
+//task6
+/*var arr = ["HTML", "JavaScript", "CSS"];
+var arrSorted = [];
+function arrSort(){
+	//for(var i = 0; i < arr.length; i++) {
+	//	arrSorted[i] = arr[i];
+	//}
+	//arrSorted.sort();
+	arrSorted = arr.slice().sort();
+}
+arrSort();
+console.log(arrSorted); // CSS, HTML, JavaScript
+console.log(arr); // HTML, JavaScript, CSS (без изменений)*/
+
+
+//task7
+/*var arr = [1, 2, 3, 4, 5];
+arr.sort(function (a, b){
+	return Math.random() - 0.5;
+});
+console.log(arr);*/
+
+//task8
+/*var vasya = { name: "Вася", age: 23 };
+var masha = { name: "Маша", age: 18 };
+var vovochka = { name: "Вовочка", age: 6 };
+
+var people = [vasya, masha, vovochka];
+people.sort(function (a, b){
+	return a.age - b.age;
+});
+for(var i = 0; i < people.length; i++)
+	console.log(people[i].name + ": " + people[i].age);
+*/	
+
+//task9
+/*var list = {
+  value: 1,
+  next: {
+    value: 2,
+    next: {
+      value: 3,
+      next: {
+        value: 4,
+        next: null
+      }
+    }
+  }
+};
+//or
+//var list = { value: 1 };
+//list.next = { value: 2 };
+//list.next.next = { value: 3 };
+//list.next.next.next = { value: 4 };
+function printList(list) {
+	var tmp = list;
+	while(tmp) {
+		console.log(tmp.value);
+		tmp = tmp.next;
+	}
+}
+function printListRec(list) {
+	console.log(list.value);
+	if(list.next)
+		printListRec(list.next);
+}
+function printReverseListRec(list) {
+	if(list.next)
+		printReverseListRec(list.next);
+
+	console.log(list.value);
+}
+function printReverseList(list){
+	var arr = [];
+	var tmp = list;
+  	while (tmp) {
+    	arr.push(tmp.value);
+    	tmp = tmp.next;
+  	}
+  	arr.reverse();
+  	console.log(arr);
+}
+//printList(list);
+//printListRec(list);
+printReverseListRec(list);
+//printReverseList(list);
+//console.log(list);*/
+
+
+//task10
+/*var arr = ["воз", "киборг", "корсет", "ЗОВ", "гробик", "костер", "сектор"];
+function aclean(arr){
+	var obj = {};
+	for(var i = 0; i < arr.length; i++){
+		var sorted = arr[i].toLowerCase().split("").sort().join();
+		obj[sorted] = arr[i];
+	}
+	var resuslt = [];
+	for(var key in obj)
+		resuslt.push(obj[key]);
+	return resuslt;
+}
+console.log(aclean(arr));*/
+
+
+//task11
+var strings = ["кришна", "кришна", "харе", "харе", "харе", "харе", "кришна", "кришна", "8-()"];
+
+function uniqueObj(arr) {
+  var obj = {};
+  for(var i = 0; i < arr.length; i++){
+  	var word = arr[i];
+  	obj[word] = true;
+  }
+  //var result = [];
+  //for(var key in obj)
+  //	result.push(key);
+  //return result;
+  //or
+  return Object.keys(obj);
+}
+function uniqueFor(arr) {
+  var result = [];
+  nextInput:
+    for (var i = 0; i < arr.length; i++) {
+      var str = arr[i]; 
+      for (var j = 0; j < result.length; j++) { 
+        if (result[j] == str) continue nextInput; 
+      }
+      result.push(str);
+    }
+  return result;
 }
 
-var keys = Object.keys(user);
-
-console.log( keys ); // name, age
+console.log(uniqueObj(strings));
+//console.log(uniqueFor(strings));
