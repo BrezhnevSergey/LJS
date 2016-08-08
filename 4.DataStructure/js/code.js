@@ -584,7 +584,7 @@ console.log(aclean(arr));*/
 
 
 //task11
-var strings = ["кришна", "кришна", "харе", "харе", "харе", "харе", "кришна", "кришна", "8-()"];
+/*var strings = ["кришна", "кришна", "харе", "харе", "харе", "харе", "кришна", "кришна", "8-()"];
 
 function uniqueObj(arr) {
   var obj = {};
@@ -613,4 +613,55 @@ function uniqueFor(arr) {
 }
 
 console.log(uniqueObj(strings));
-//console.log(uniqueFor(strings));
+//console.log(uniqueFor(strings));*/
+
+//////-------------Array iteration
+//task1
+/*var arr = ["Есть", "жизнь", "на", "Марсе"];
+var arrLength = [];
+//for (var i = 0; i < arr.length; i++) {
+//  arrLength[i] = arr[i].length;
+//}
+arrLength = arr.map(function(array) {
+	return array.length;
+});
+console.log(arrLength); // 4,5,2,5
+*/
+//task2
+arr = [1,2,3,4,5];
+//arr = [-2,-1,0,1];
+/*function getSums(arr) {
+	function Process(prevArray, current, index, arr) {
+		if(index == 0){
+			var tmpArray = prevArray.concat(current);
+		} else {
+			var tmpArray = prevArray.concat(arr[index - 1] + current);
+		}
+		return tmpArray;
+	}
+	var resultArray = arr.reduce(Process, []);
+	return resultArray;
+}*/
+/*function getSums(arr) {
+	function Process(prevArray, current, index, arr) {
+			var tmp = 0;
+			for(var i = 0; i <= index; i++){
+				tmp += arr[i];
+			}
+			var tmpArray = prevArray.concat(tmp);
+		return tmpArray;
+	}
+	var resultArray = arr.reduce(Process, []);
+	return resultArray;
+}*/
+function getSums(arr) {
+	var array = [];
+	if(!arr.length) return array;
+	var resultArray = arr.reduce(function (sum, current){
+		array.push(sum);
+		return sum + current;
+	});
+	array.push(resultArray)
+	return array;
+}
+console.log(getSums(arr));
