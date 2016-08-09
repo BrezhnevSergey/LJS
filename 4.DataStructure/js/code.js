@@ -628,7 +628,7 @@ arrLength = arr.map(function(array) {
 console.log(arrLength); // 4,5,2,5
 */
 //task2
-arr = [1,2,3,4,5];
+//arr = [1,2,3,4,5];
 //arr = [-2,-1,0,1];
 /*function getSums(arr) {
 	function Process(prevArray, current, index, arr) {
@@ -654,7 +654,7 @@ arr = [1,2,3,4,5];
 	var resultArray = arr.reduce(Process, []);
 	return resultArray;
 }*/
-function getSums(arr) {
+/*function getSums(arr) {
 	var array = [];
 	if(!arr.length) return array;
 	var resultArray = arr.reduce(function (sum, current){
@@ -664,4 +664,155 @@ function getSums(arr) {
 	array.push(resultArray)
 	return array;
 }
-console.log(getSums(arr));
+console.log(getSums(arr));*/
+
+
+//////-----------------arguments array
+//task1
+/*function f(x) {
+	return arguments.length ? 1 : 0;
+}
+console.log(f(undefined)); // 1
+console.log(f()); //0
+console.log(f(1)); //1*/
+
+
+//task2
+/*function sum(){
+	var result = 0;
+	for(var i = 0; i < arguments.length; i++){
+		result += arguments[i];
+	}
+	return result;
+}
+console.log(sum()); // 0
+console.log(sum(1)); // 1
+console.log(sum(1, 2)); // 3
+console.log(sum(1, 2, 3)); // 6
+console.log(sum(1, 2, 3, 4)); // 10*/
+
+//task3 
+/*var john = {
+	name: "John",
+	surname: "Smith",
+	age: 25
+};
+
+var user = {
+	isAdmin: false,
+	isMailConfirm: true
+};
+
+var university = {
+	university: "Cambridge"
+}
+
+function copy(dst) {
+	for(var i = 1; i < arguments.length; i++){
+		var arg = arguments[i];
+		for(var key in arg) {
+			dst[key] = arguments[key];
+		}
+	}
+	return dst;
+}
+
+console.log(john, user, university);
+console.log(copy (john, user, university));
+console.log(john, user, university);*/
+
+
+/////---------------------date object
+/*var arr = [];
+for (var i = 0; i < 1000; i++) arr[i] = 0;
+
+function walkIn(arr) {
+  for (var key in arr) arr[key]++;
+}
+
+function walkLength(arr) {
+  for (var i = 0; i < arr.length; i++) arr[i]++;
+}
+
+function bench(f) {
+  var date = new Date();
+  for (var i = 0; i < 1000; i++) f(arr);
+  return new Date() - date;
+}
+
+// bench для каждого теста запустим много раз, чередуя
+var timeIn = 0,
+  timeLength = 0;
+for (var i = 0; i < 100; i++) {
+  timeIn += bench(walkIn);
+  timeLength += bench(walkLength);
+}
+
+console.log( 'Время walkIn: ' + timeIn + 'мс' );
+console.log( 'Время walkLength: ' + timeLength + 'мс' );*/
+
+/*var arr = [];
+for (var i = 0; i < 1000; i++) arr[i] = 0;
+
+function walkIn(arr) {
+  for (var key in arr) arr[key]++;
+}
+
+function walkLength(arr) {
+  for (var i = 0; i < arr.length; i++) arr[i]++;
+}
+
+function bench(f) {
+  for (var i = 0; i < 10000; i++) f(arr);
+}
+
+console.time("All Benchmarks");
+
+console.time("walkIn");
+bench(walkIn);
+console.timeEnd("walkIn");
+
+console.time("walkLength");
+bench(walkLength);
+console.timeEnd("walkLength");
+
+console.timeEnd("All Benchmarks");*/
+
+//task1
+/*var date = new Date(2012, 1, 20, 3, 12);
+console.log(date);*/
+
+//task2
+/*var date = new Date(2012, 0, 3);
+//function getWeekDays(date) {
+//	var day = date.getDay();
+//	switch (day) {
+//		case 0:
+//			return "вс";
+//		case 1:
+//			return "пн";
+//		case 2:
+//			return "вт";
+//		case 3:
+//			return "ср";
+//		case 4:
+//			return "чт";
+//		case 5:
+//			return "пт";
+//		case 6:
+//			return "сб";
+//		default:
+//			return "error";
+//	}
+//}
+//or
+//function getWeekDays(date) {
+//	var days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+//	return days[date.getDay()];
+//}
+//or
+function getWeekDays(date) {
+	return date.toLocaleString('ru', {weekday: 'long'});
+}
+console.log(getWeekDays(date));*/
+
