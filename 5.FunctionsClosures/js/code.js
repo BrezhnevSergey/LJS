@@ -20,8 +20,6 @@ console.log(sum(5)(-1));
   Buffer.clear = function(){
     buffer = "";
   }
-
-
   return Buffer;
 }
 //or
@@ -58,3 +56,33 @@ console.log(buffer()); // Замыкания Использовать Нужно
 console.log(buffer2()); // 010
 buffer2.clear();
 console.log(buffer2()); // */
+
+//task4
+var users = [{
+  name: "Вася",
+  surname: 'Иванов',
+  age: 20
+}, {
+  name: "Петя",
+  surname: 'Чапаев',
+  age: 25
+}, {
+  name: "Маша",
+  surname: 'Медведева',
+  age: 18
+}];
+//byField = function(field) {
+//  return function(a, b){
+//      return a[field] > b[field] ? 1 : -1;
+//  };
+//};
+//or
+function byField(field) {
+  return function(a, b){
+      return a[field] > b[field] ? 1 : -1;
+  };
+};
+users.sort(byField("age"));
+users.forEach(function(user) {
+  console.log( user.age );
+})
