@@ -816,3 +816,20 @@ function getWeekDays(date) {
 }
 console.log(getWeekDays(date));*/
 
+//task3
+/*var date = new Date(2012, 0, 3);
+
+//function getLocalDay(date) {
+//	var days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+//	return days[date.getDay() - 1];
+//}
+function getLocalDay(date) {
+	var day = date.getDay(date);
+	if(day == 0)
+		day = 7;
+	return day;
+}
+console.log(getLocalDay(date), );*/
+
+//task4
+var date = new Date(2015, 0, 2);
