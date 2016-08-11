@@ -817,6 +817,7 @@ function getWeekDays(date) {
 console.log(getWeekDays(date));*/
 
 //task3
+<<<<<<< HEAD
 /*var date = new Date(2012, 0, 3);
 
 //function getLocalDay(date) {
@@ -833,3 +834,123 @@ console.log(getLocalDay(date), );*/
 
 //task4
 var date = new Date(2015, 0, 2);
+=======
+/*var date = new Date(2015, 0, 2);
+function getDateAgo(date, days) {
+	var cloneDate = new Date(date);
+	cloneDate.setDate(cloneDate.getDate() - days);
+	return cloneDate.getDate();
+}
+console.log( getDateAgo(date, 1) ); // 1, (1 января 2015)
+console.log( getDateAgo(date, 2) ); // 31, (31 декабря 2014)
+console.log( getDateAgo(date, 365) ); // 2, (2 января 2014)
+console.log(date);*/
+
+//task4
+/*//function getLastDayOfMonth(year, month) {
+//	var date = new Date(year, month + 1);
+//	date.setDate(date.getDate() - 1);
+//	return date.getDate();
+//}
+
+function getLastDayOfMonth(year, month) {
+	var date = new Date(year, month + 1, 0);
+	return date.getDate();
+}
+
+console.log( getLastDayOfMonth(2012, 1) ); //29
+console.log( getLastDayOfMonth(2012, 0) ); // 31
+console.log( getLastDayOfMonth(2013, 1) ); // 28*/
+
+
+//task5
+/*function getSecondsToday(){
+	var now = new Date();
+	var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+	var diff = now - today;
+	return Math.floor(diff / 1000);
+}
+//or
+function getSecondsToday(){
+	var now = new Date();
+	return (now.getHours() * 3600) + (now.getMinutes() * 60) + now.getSeconds();
+}
+
+console.log( getSecondsToday() );*/
+
+//taks6
+/*function getSecondsToTomorrow() {
+	var now = new Date;
+	var tommorow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+	var diff = tommorow - now;
+	return Math.floor(diff / 1000);
+}
+
+console.log( getSecondsToTomorrow() );*/
+
+//task7
+/*//function formatDate(date) {
+//	var dateStr = date.toISOString();
+//	var shortDate = dateStr.slice(0, dateStr.indexOf("T"));
+//	var arrayIndexOfSeparate = [];
+//	var pos = -1;
+//	while((pos = shortDate.indexOf("-", pos + 1)) != -1) {
+//		arrayIndexOfSeparate.push(pos);
+//	}
+//	var day = shortDate.slice(arrayIndexOfSeparate[1] + 1);
+//	var month = shortDate.slice(arrayIndexOfSeparate[0] + 1, arrayIndexOfSeparate[1]);
+//	var year = shortDate.slice(2, arrayIndexOfSeparate[0]);
+//	return day + "." + month + "." + year;
+//}
+
+function formatDate(date) {
+	var year = date.getFullYear() % 100;
+	if(year < 10) year = "0" + year;
+
+	var day = date.getDate();
+	if(day < 10 ) day = "0" + day;
+
+	var month = date.getMonth() + 1;
+	if (month < 10) month = "0" + month;
+
+	return day + "." + month + "." + year;
+}
+function formatDate(date) {
+  return date.toLocaleString("ru", {day: 'numeric', month: 'numeric', year: '2-digit'});
+}
+var date = new Date(2014, 0, 3);
+console.log( formatDate(date) );*/
+
+
+//task8
+function formatDate(date){
+	var diff = new Date() - date;
+	
+	if((diff / 1000) < 1) 
+		return "Только что";
+
+	if(((diff/1000)/60) < 1) 
+		return Math.round(diff/1000) + "с. назад";
+
+	if (((diff/1000)/60)/60 < 1) 
+		return Math.round((diff/1000)/60) + "м. назад";
+	
+	var d = date;
+	d = [
+    	'0' + d.getDate(),
+    	'0' + (d.getMonth() + 1),
+    	'' + d.getFullYear(),
+    	'0' + d.getHours(),
+    	'0' + d.getMinutes()
+  	];
+    for (var i = 0; i < d.length; i++) {
+	    d[i] = d[i].slice(-2);
+  }
+  return d.slice(0, 3).join('.') + ' ' + d.slice(3).join(':');
+}
+
+console.log( formatDate(new Date(new Date - 1)) ); // "только что"
+console.log( formatDate(new Date(new Date - 30 * 1000)) ); // "30 сек. назад"
+console.log( formatDate(new Date(new Date - 5 * 60 * 1000)) ); // "5 мин. назад"
+console.log( formatDate(new Date(new Date - 86400 * 1000)) ); // вчерашняя дата в формате "дд.мм.гг чч:мм"
+>>>>>>> ea5dc507540c98d49bbd8d5d3fbef6c0f92cd832
