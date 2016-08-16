@@ -12,15 +12,15 @@ console.log(sum(5)(-1));
 //task2-3
 /*function makeBuffer(){
   var buffer = "";
-  function Buffer(){
+  function funcBuffer(){
     if(arguments[0] == undefined)
       return buffer;
     buffer += arguments[0];
   }
-  Buffer.clear = function(){
+  funcBuffer.clear = function(){
     buffer = "";
   }
-  return Buffer;
+  return funcBuffer;
 }
 //or
 //function makeBuffer(){
@@ -58,7 +58,7 @@ buffer2.clear();
 console.log(buffer2()); // */
 
 //task4
-var users = [{
+/*var users = [{
   name: "Вася",
   surname: 'Иванов',
   age: 20
@@ -85,4 +85,5 @@ function byField(field) {
 users.sort(byField("age"));
 users.forEach(function(user) {
   console.log( user.age );
-})
+})*/
+
