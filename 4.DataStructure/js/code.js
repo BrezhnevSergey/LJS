@@ -817,7 +817,6 @@ function getWeekDays(date) {
 console.log(getWeekDays(date));*/
 
 //task3
-<<<<<<< HEAD
 /*var date = new Date(2012, 0, 3);
 
 //function getLocalDay(date) {
@@ -834,7 +833,6 @@ console.log(getLocalDay(date), );*/
 
 //task4
 var date = new Date(2015, 0, 2);
-=======
 /*var date = new Date(2015, 0, 2);
 function getDateAgo(date, days) {
 	var cloneDate = new Date(date);
@@ -953,4 +951,4 @@ console.log( formatDate(new Date(new Date - 1)) ); // "только что"
 console.log( formatDate(new Date(new Date - 30 * 1000)) ); // "30 сек. назад"
 console.log( formatDate(new Date(new Date - 5 * 60 * 1000)) ); // "5 мин. назад"
 console.log( formatDate(new Date(new Date - 86400 * 1000)) ); // вчерашняя дата в формате "дд.мм.гг чч:мм"
->>>>>>> ea5dc507540c98d49bbd8d5d3fbef6c0f92cd832
+
