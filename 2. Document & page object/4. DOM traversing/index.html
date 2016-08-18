@@ -2,16 +2,44 @@
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>4. ��������� �� DOM-���������</title>
+		<title>4. Навигация по DOM-элементам</title>
 		<meta name="viewport" content="width=device-width, maximum-scale=1"/>
   		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   		<meta name="format-detection" content="telephone=no" />
 		 <link media="all" rel="stylesheet" href="css/all.css" type="text/css" />
-		<script type="text/javascript" src="js/jscript.js"></script>
+		<!-- <script type="text/javascript" src="js/jscript.js"></script> -->
 	</head>
 	<body>
-		<div class="wrapper">
-		
-		</div>
+  		<div>Пользователи:</div>
+  		<ul>
+    		<li>Маша</li>
+    		<li>Вовочка</li>
+  		</ul>
+
+			  <!-- комментарий -->
+
+  		<script>
+  		//task1
+	   	//	console.log(document.documentElement.children[0]);
+    	//	console.log(document.documentElement.firstChild);
+    	//	console.log(document.body.children[1]);
+    	//	console.log(document.body.children[1].children[1]);
+
+
+    	//task2
+    	var element = document.documentElement.children[2];
+    	//if (!element.childNodes.length) 
+    		console.log("Emty element");
+
+    	//or
+    	if (!element.firstChild) 
+    		console.log("Emty element");
+
+    	//or
+    	if (!element.lastChild) 
+    		console.log("Emty element");
+  		</script>
 	</body>
 </html>
+
+
